@@ -1,0 +1,14 @@
+# Manifeste geben immer die Version der Kubernetes-API und die Art der Ressource an.
+apiVersion: v1
+kind: Pod
+
+# Die Metadaten für die Ressource umfassen den Namen (obligatorisch) und das Label (optional).
+metadata:
+  name: hello-kubernetes-3
+
+# spec ist die eigentliche Spezifikation für die Ressource.
+# Bei einem Pod ist das Minimum der/die auszuführende(n) Container mit dem Containernamen und dem Image.
+spec:
+  containers:
+    - name: web
+      image: mainho/hello-kubernetes
